@@ -31,7 +31,7 @@ body {
 /* Logo styling */
 .logo {
     max-width: 250px;
-    margin-bottom: 30px;
+    margin-block: 30px;
 }
 
 /* Message styles */
@@ -55,4 +55,12 @@ body {
 
 .message a:hover {
     text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .maintenance-container {
+        width: 80%;
+    }
+    .message h1 {
+        font-size: 1.5rem;
+    }
 }
