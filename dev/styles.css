@@ -6,15 +6,70 @@
 body {
     margin: 0;
     background-color: #09403A;
+    font-family: "Poppins", sans-serif;
 }
 header {
-    background-color: #E4EAF2;
+    background-color: #F2F2F2;
     height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: 5vw;
+    padding-inline-end: 10vw;
 }
 main {
-    padding-inline: 5vw;
+    padding-inline: 10vw;
 }
 footer {
     background-color: #E4EAF2;
     height: 20vh;
+}
+#header-logo-container {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+#header-logo-container img {
+    height: 55%;
+}
+header nav ul {
+    list-style: none;
+}
+header nav ul li {
+    display: inline;
+    margin: 0 2vw;
+}
+header nav ul li a {
+    font-size: 1.4em;
+    color: #2B7B8C;
+    text-decoration: none;
+}
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+.flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+.flex-col-container {
+    display: flex;
+    flex-direction: column;
+}
+#presentacion {
+    display: flex;
+    justify-content: center;
+    padding-block: 15vh;
+}
+#presentacion-container {
+    width: 65%;
+}
+#presentacion-logo-container {
+    margin-bottom: 5vh;
+}
+#presentacion-logo-container img {
+    width: 85%;
+}
+#presentacion-container p{
+    text-align: justify;
+    font-size: 1.4em;
 }
