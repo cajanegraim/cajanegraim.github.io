@@ -21,7 +21,7 @@ main {
     padding-inline: 10vw;
 }
 footer {
-    background-color: #E4EAF2;
+    background-color: #F2F2F2;
     height: 20vh;
 }
 #header-logo-container {
@@ -72,4 +72,35 @@ header nav ul li a:hover {
 #presentacion-container p{
     text-align: justify;
     font-size: 1.4em;
+}
+@media (max-width: 768px) {
+    header {
+        height: 15vh;
+        justify-content: center;
+    }
+    main {
+        padding-inline:5vw;
+    }
+    footer {
+        height: 30vh;
+    }
+    #header-logo-container {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+    }
+    header nav ul {
+        display: none;
+    }
+    #presentacion {
+        padding-block: 10vh;
+    }
+    #presentacion-container {
+        width: 90%;
+    }
+    #presentacion-logo-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5vh;
+    }
 }
