@@ -17,9 +17,6 @@ header {
     padding-inline-start: 5vw;
     padding-inline-end: 10vw;
 }
-main {
-    padding-inline: 10vw;
-}
 footer {
     background-color: #F2F2F2;
     height: 20vh;
@@ -58,9 +55,14 @@ header nav ul li a:hover {
 #presentacion {
     display: flex;
     justify-content: center;
-    padding-block: 15vh;
+    background-image: url(/dev/img/background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-inline: 10vw;
 }
 #presentacion-container {
+    padding-block: 15vh;
     width: 65%;
 }
 #presentacion-logo-container {
@@ -76,10 +78,9 @@ header nav ul li a:hover {
 @media (max-width: 768px) {
     header {
         height: 15vh;
-        justify-content: center;
-    }
-    main {
-        padding-inline:5vw;
+        justify-content: space-around;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
     }
     footer {
         height: 30vh;
@@ -89,11 +90,38 @@ header nav ul li a:hover {
         display: flex;
         align-items: center;
     }
-    header nav ul {
+    .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        width: 200px;
+        padding: 10px 0;
+        border-radius: 5px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+    .menu-icon span {
+        background-color: black;
+        display: block;
+        height: 3px;
+        width: 25px;
+        margin: 5px auto;
     }
     #presentacion {
         padding-block: 10vh;
+        padding-inline: 5vw;
     }
     #presentacion-container {
         width: 90%;
