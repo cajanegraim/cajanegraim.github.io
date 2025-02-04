@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #f4f4f4;
     margin: 0;
+    background-color: #09403A;
+}
+header {
+    background-color: #E4EAF2;
+    height: 20vh;
+}
+main {
+    padding-inline: 5vw;
+}
+footer {
+    background-color: #E4EAF2;
+    height: 20vh;
 }
