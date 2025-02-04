@@ -1,7 +1,10 @@
 const menuIcon = document.getElementById("menu-icon");
-const navLinks = document.querySelector(".nav-links");
+const sidebar = document.getElementById("sidebar");
+const content = document.querySelector("main");
+const header = document.querySelector("header");
 
 menuIcon.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  console.log('click');
+  sidebar.classList.toggle("active");
+  content.classList.toggle("active");
+  header.classList.toggle("active");  // Añadimos la clase active al header
 });
