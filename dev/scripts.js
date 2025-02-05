@@ -9,6 +9,11 @@ menuIcon.addEventListener("click", () => {
   content.classList.toggle("active");
   header.classList.toggle("active");
   footer.classList.toggle("active");
+  if (window.location.pathname != '/dev/index.html' && window.location.pathname != '/dev/') {
+    sidebarLinks = document.querySelector(".sidebar-links");
+    sidebarLinks.innerHTML = "<li><a href='/dev/index.html'>INICIO</a></li><li><a href='/dev/nosotros.html'>NOSOTROS</a></li><li><a href='/dev/servicios.html'>SERVICIOS</a></li><li><a href='/dev/areas.html'>ÁREAS DE INVESTIGACIÓN</a></li><li><a href='/dev/contacto.html'>CONTACTO</a></li>";
+    console.log(sidebarLinks.innerHTML);
+  }
 });
 
 /* ANIMACIONES */

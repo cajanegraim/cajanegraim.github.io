@@ -60,6 +60,9 @@ header.shrunk {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 /* MAIN */
+.relleno-div {
+    height: 200vh;
+}
 .flex-row-container {
     display: flex;
     flex-direction: row;
