@@ -10,6 +10,13 @@ menuIcon.addEventListener("click", () => {
 });
 
 /* ANIMACIONES */
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 50) { // Cuando el scroll es mayor a 50px
+    header.classList.add('shrunk'); // Agrega la clase 'shrunk'
+  } else {
+    header.classList.remove('shrunk'); // Elimina la clase 'shrunk'
+  }
+});
 window.addEventListener('DOMContentLoaded', () => {
   const contents = document.querySelectorAll('.initial-fade-in');
   

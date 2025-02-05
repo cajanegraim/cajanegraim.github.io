@@ -14,6 +14,10 @@ header {
     display: flex;
     align-items: center;
     padding-inline-start: 5vw;
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    transition: height 0.3s ease, padding-inline-start 0.3s ease;
 }
 .sidebar {
     display: none;
@@ -23,7 +27,7 @@ footer {
     height: 20vh;
 }
 #header-logo-container {
-    height: 20vh;
+    height: 100%;
     display: flex;
     align-items: center;
 }
@@ -68,7 +72,8 @@ header nav ul li a:hover {
     padding-inline: 15vw;
 }
 #presentacion-container {
-    padding-block: 20vh;
+    padding-block-start: 40vh;
+    padding-block-end: 20vh;
     width: 65%;
 }
 #presentacion-logo-container {
@@ -132,6 +137,11 @@ header nav ul li a:hover {
 }
 
 /* ANIMACIONES */
+header.shrunk {
+    height: 10vh;
+    padding-inline-start: 10vw;
+    ;
+}
 .initial-fade-in {
     opacity: 0; /* El contenido está invisible al principio */
     transform: translateY(20px); /* Hace que el contenido empiece desplazado un poco hacia abajo */
