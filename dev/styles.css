@@ -140,7 +140,7 @@ header nav ul li a:hover {
 header.shrunk {
     height: 10vh;
     padding-inline-start: 10vw;
-    ;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .initial-fade-in {
     opacity: 0; /* El contenido está invisible al principio */
