@@ -23,8 +23,59 @@ header {
     display: none;
 }
 footer {
+    display: flex;
+    align-items: center;
     background-color: #2C403E;
-    height: 20vh;
+    height: 35vh;
+    padding-inline: 5vw;
+    padding-block: 5vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer div:first-child div:first-child {
+    width: 30vw;
+}
+footer div:first-child div:nth-child(2) {
+    display: flex;
+    width: 50vw;
+    justify-content: right;
+}
+footer div:first-child div:first-child img {
+    width: 90%;
+}
+footer div:first-child div:nth-child(2) {
+    width: 50vw;
+    gap: 5vh;
+}
+footer div:first-child div:nth-child(2) p{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 1vh;
+    color: white;
+}
+footer div:first-child div:nth-child(2) p img{
+    height: 2.5vw;
+    margin-right: 1vw;
+}
+footer div:first-child div:nth-child(2) p a{
+    color: white;
+    text-decoration: none;
+}
+footer div:first-child div:nth-child(2) p a:hover{
+    color: white;
+    text-decoration: underline;
+}
+footer div:nth-child(2) {
+    color: white;
+}
+footer div:nth-child(2) span a {
+    color: white;
+    text-decoration: none;
+}
+footer div:nth-child(2) span a:hover {
+    color: white;
+    text-decoration: underline;
 }
 #header-logo-container {
     height: 100%;
