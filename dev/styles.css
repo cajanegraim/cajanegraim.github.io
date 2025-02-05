@@ -8,6 +8,11 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: #F2F2F2;
 }
+/* SIDE BAR */
+.sidebar {
+    display: none;
+}
+/* HEADER */
 header {
     background-color: #F2F2F2;
     height: 20vh;
@@ -18,65 +23,6 @@ header {
     z-index: 1000;
     width: 100vw;
     transition: height 0.3s ease, padding-inline-start 0.3s ease;
-}
-.sidebar {
-    display: none;
-}
-footer {
-    display: flex;
-    align-items: center;
-    background-color: #2C403E;
-    height: 35vh;
-    padding-inline: 5vw;
-    padding-block: 5vh;
-    flex-direction: column;
-    justify-content: space-between;
-}
-footer div:first-child div:first-child {
-    width: 30vw;
-}
-footer div:first-child div:nth-child(2) {
-    display: flex;
-    width: 50vw;
-    justify-content: right;
-}
-footer div:first-child div:first-child img {
-    width: 90%;
-}
-footer div:first-child div:nth-child(2) {
-    width: 50vw;
-    gap: 5vh;
-}
-footer div:first-child div:nth-child(2) p{
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin-bottom: 1vh;
-    color: white;
-}
-footer div:first-child div:nth-child(2) p img{
-    height: 2.5vw;
-    margin-right: 1vw;
-}
-footer div:first-child div:nth-child(2) p a{
-    color: white;
-    text-decoration: none;
-}
-footer div:first-child div:nth-child(2) p a:hover{
-    color: white;
-    text-decoration: underline;
-}
-footer div:nth-child(2) span{
-    color: white;
-    font-size: .8em;
-}
-footer div:nth-child(2) span a {
-    color: white;
-    text-decoration: none;
-}
-footer div:nth-child(2) span a:hover {
-    color: white;
-    text-decoration: underline;
 }
 #header-logo-container {
     height: 100%;
@@ -106,6 +52,12 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #F27506;
 }
+header.shrunk {
+    height: 10vh;
+    padding-inline-start: 10vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* MAIN */
 .flex-row-container {
     display: flex;
     flex-direction: row;
@@ -187,13 +139,64 @@ header nav ul li a:hover {
 #servicios-container div div:nth-child(2) span {
     font-size: 1em;
 }
-
-/* ANIMACIONES */
-header.shrunk {
-    height: 10vh;
-    padding-inline-start: 10vw;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* FOOTER */
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #2C403E;
+    height: 35vh;
+    padding-inline: 5vw;
+    padding-block: 5vh;
+    flex-direction: column;
+    justify-content: space-between;
 }
+footer div:first-child div:first-child {
+    width: 30vw;
+}
+footer div:first-child div:nth-child(2) {
+    display: flex;
+    width: 50vw;
+    justify-content: right;
+}
+footer div:first-child div:first-child img {
+    width: 90%;
+}
+footer div:first-child div:nth-child(2) {
+    width: 50vw;
+    gap: 5vh;
+}
+footer div:first-child div:nth-child(2) p{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 1vh;
+    color: white;
+}
+footer div:first-child div:nth-child(2) p img{
+    height: 2.5vw;
+    margin-right: 1vw;
+}
+footer div:first-child div:nth-child(2) p a{
+    color: white;
+    text-decoration: none;
+}
+footer div:first-child div:nth-child(2) p a:hover{
+    color: white;
+    text-decoration: underline;
+}
+footer div:nth-child(2) span{
+    color: white;
+    font-size: .8em;
+}
+footer div:nth-child(2) span a {
+    color: white;
+    text-decoration: none;
+}
+footer div:nth-child(2) span a:hover {
+    color: white;
+    text-decoration: underline;
+}
+/* ANIMACIONES */
 .initial-fade-in {
     opacity: 0; /* El contenido está invisible al principio */
     transform: translateY(20px); /* Hace que el contenido empiece desplazado un poco hacia abajo */
@@ -231,6 +234,7 @@ header.shrunk {
     transform: translateY(0); /* El contenido se mueve a su posición original */
 }
 @media (max-width: 768px) {
+    /* HEADER */
     header {
         height: 15vh;
         justify-content: space-around;
@@ -245,6 +249,35 @@ header.shrunk {
     header.active {
         margin-left: 250px;
     }
+    header.shrunk {
+        height: 8vh;
+        padding-inline-start: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header.shrunk #header-logo-container{
+        height: 100%;
+        justify-content: space-around;
+    }
+    #header-logo-container {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+    }
+    .nav-links {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+    .menu-icon span {
+        background-color: black;
+        display: block;
+        height: 3px;
+        width: 25px;
+        margin: 5px auto;
+    }
+    /* SIDEBAR */
     .sidebar {
         display: flex;
         position: fixed;
@@ -295,71 +328,13 @@ header.shrunk {
         font-size: 1.5em;
         transition: background-color 0.3s ease;
     }
+    /* MAIN */
     main {
         transition: margin-left 0.3s, left 0.3s;
         width: 100%;
     }
     main.active {
         margin-left: 250px;
-    }
-    footer {
-        width: 100%;
-        height: auto;
-        transition: margin-left 0.3s, left 0.3s;
-    }
-    footer.active {
-        margin-left: 250px;
-    }
-    footer div:first-child {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-    footer div:first-child div:first-child {
-        width: 50vw;
-        margin-bottom: 3vh;
-    }
-    footer div:first-child div:nth-child(2) {
-        display: flex;
-        flex-direction: column;
-        width: 50vw;
-        gap: 0
-    }
-    footer div:first-child div:nth-child(2) p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        margin-bottom: 1vh;
-        color: white;
-    }
-    footer div:nth-child(2) {
-        text-align: center;
-        padding-bottom: 1vh;
-    }
-    footer div:nth-child(2) span {
-        color: white;
-        font-size: .7em;
-    }
-    #header-logo-container {
-        height: 15vh;
-        display: flex;
-        align-items: center;
-    }
-    .nav-links {
-        display: none;
-    }
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-    .menu-icon span {
-        background-color: black;
-        display: block;
-        height: 3px;
-        width: 25px;
-        margin: 5px auto;
     }
     #presentacion {
         padding-inline: 5vw;
@@ -408,15 +383,45 @@ header.shrunk {
         line-height: 120%;
         margin-bottom: 0;
     }
-
-    /* ANIMACIONES */
-    header.shrunk {
-        height: 8vh;
-        padding-inline-start: 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* FOOTER */
+    footer {
+        width: 100%;
+        height: auto;
+        transition: margin-left 0.3s, left 0.3s;
     }
-    header.shrunk #header-logo-container{
-        height: 100%;
-        justify-content: space-around;
+    footer.active {
+        margin-left: 250px;
+    }
+    footer div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    footer div:first-child div:first-child {
+        width: 50vw;
+        margin-bottom: 3vh;
+    }
+    footer div:first-child div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        gap: 0
+    }
+    footer div:first-child div:nth-child(2) p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 1vh;
+        color: white;
+    }
+    footer div:nth-child(2) {
+        text-align: center;
+        padding-bottom: 1vh;
+    }
+    footer div:nth-child(2) span {
+        color: white;
+        font-size: .7em;
     }
 }
