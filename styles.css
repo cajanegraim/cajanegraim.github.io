@@ -64,7 +64,7 @@ body {
     border-radius: 8px;
     width: 100%;
     max-width: 600px;
-    margin-top: 5vh;
+    margin-top: 0vh;
     text-align: start;
 }
 .contact-form h2 {
@@ -119,8 +119,5 @@ body {
     }
     .message h1 {
         font-size: 1.5rem;
-    }
-    .contact-form {
-        margin-top: 0vh;
     }
 }
