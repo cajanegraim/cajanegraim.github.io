@@ -2,11 +2,13 @@ const menuIcon = document.getElementById("menu-icon");
 const sidebar = document.getElementById("sidebar");
 const content = document.querySelector("main");
 const header = document.querySelector("header");
+const footer = document.querySelector("footer");
 
 menuIcon.addEventListener("click", () => {
   sidebar.classList.toggle("active");
   content.classList.toggle("active");
-  header.classList.toggle("active");  // Añadimos la clase active al header
+  header.classList.toggle("active");
+  footer.classList.toggle("active");
 });
 
 /* ANIMACIONES */

@@ -233,10 +233,13 @@ header.shrunk {
     header {
         height: 15vh;
         justify-content: space-around;
-        padding-inline-start: 0;
-        padding-inline-end: 0;
-        width: 100%;
-        transition: margin-left 0.3s, left 0.3s;
+        position: fixed;
+        z-index: 1000;
+        width: 100vw;
+        transition: 0.3s ease;
+    }
+    #header-logo-container {
+        height: 100%;
     }
     header.active {
         margin-left: 250px;
@@ -299,12 +302,44 @@ header.shrunk {
         margin-left: 250px;
     }
     footer {
-        height: 30vh;
         width: 100%;
+        height: auto;
         transition: margin-left 0.3s, left 0.3s;
     }
     footer.active {
         margin-left: 250px;
+    }
+    footer div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    footer div:first-child div:first-child {
+        width: 50vw;
+        margin-bottom: 3vh;
+    }
+    footer div:first-child div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        gap: 0
+    }
+    footer div:first-child div:nth-child(2) p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 1vh;
+        color: white;
+    }
+    footer div:nth-child(2) {
+        text-align: center;
+        padding-bottom: 1vh;
+    }
+    footer div:nth-child(2) span {
+        color: white;
+        font-size: .7em;
     }
     #header-logo-container {
         height: 15vh;
@@ -330,10 +365,57 @@ header.shrunk {
     }
     #presentacion-container {
         width: 90%;
+        padding-block-start: 30vh;
+        padding-block-end: 15vh;
     }
     #presentacion-logo-container {
         display: flex;
         justify-content: center;
+        margin-bottom: vh;
+    }
+    #servicios {
+        padding-block: 5vh;
+    }
+    #servicios h1 {
+        margin-bottom: 5vh
+    }
+    #servicios-container {
+        display: flex;
+        flex-direction: column;
+        padding-block: 0;
+    }
+    #servicios-container div {
+        width: 90vw;
+        height: 45vh;
+        margin-bottom: 0vh;
+    }
+    #servicios-container div div:first-child {
+        display: flex;
+        width: 50vw;
+        height: 50%;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 5vh;
+    }
+    #servicios-container div div:nth-child(2) {
+        width: 70%;
+        padding-inline: 1vw;
+    }
+    #servicios-container div div:nth-child(2) h1 {
+        font-size: 1.5em;
+        font-weight: 500;
+        line-height: 120%;
+        margin-bottom: 0;
+    }
+
+    /* ANIMACIONES */
+    header.shrunk {
+        height: 8vh;
+        padding-inline-start: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header.shrunk #header-logo-container{
+        height: 100%;
+        justify-content: space-around;
     }
 }
