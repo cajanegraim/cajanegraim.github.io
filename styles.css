@@ -12,13 +12,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     color: #333;
 }
 
 /* Main container for centering content */
 .maintenance-container {
+    margin-block: 10vh;
     text-align: center;
     background-color: white;
     padding: 40px;
@@ -56,11 +56,71 @@ body {
 .message a:hover {
     text-decoration: underline;
 }
+
+/* FORMULARIO DE CONTACTO */
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 5vh;
+    text-align: start;
+}
+.contact-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 3vh;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+}
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.contact-form button:hover {
+    background-color: #45a049;
+}
+.form-message {
+    font-size: 14px;
+    color: red;
+    display: none;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
     .maintenance-container {
         width: 80%;
     }
     .message h1 {
         font-size: 1.5rem;
+    }
+    .contact-form {
+        margin-top: 0vh;
     }
 }
