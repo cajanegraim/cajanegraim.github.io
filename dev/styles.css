@@ -66,8 +66,9 @@ footer div:first-child div:nth-child(2) p a:hover{
     color: white;
     text-decoration: underline;
 }
-footer div:nth-child(2) {
+footer div:nth-child(2) span{
     color: white;
+    font-size: .8em;
 }
 footer div:nth-child(2) span a {
     color: white;
