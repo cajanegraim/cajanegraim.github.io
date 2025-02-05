@@ -18,16 +18,15 @@ menuIcon.addEventListener("click", () => {
 
 /* ANIMACIONES */
 window.addEventListener('scroll', function() {
-  if (window.scrollY > 50) { // Cuando el scroll es mayor a 50px
-    header.classList.add('shrunk'); // Agrega la clase 'shrunk'
+  if (window.scrollY > 50) {
+    header.classList.add('shrunk');
   } else {
-    header.classList.remove('shrunk'); // Elimina la clase 'shrunk'
+    header.classList.remove('shrunk');
   }
 });
 window.addEventListener('DOMContentLoaded', () => {
   const contents = document.querySelectorAll('.initial-fade-in');
   
-  // Activar el efecto en los elementos que ya están en la pantalla de inicio
   contents.forEach(content => {
     const contentPosition = content.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
@@ -44,9 +43,23 @@ window.addEventListener('scroll', () => {
     const contentPosition = content.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
 
-    // Si el contenido entra en la vista mientras se hace scroll, agregar la clase 'visible'
     if (contentPosition < windowHeight * 0.8) {
       content.classList.add('visible');
     }
   });
+});
+
+/* CONTACTO */
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var name = document.getElementById('nombre').value;
+  var number = document.getElementById('telefono').value;
+  var email = document.getElementById('email').value;
+  var message = document.getElementById('comentario').value;
+
+  if (name && number && email && message) {
+    alert('Formulario enviado con éxito.');
+  } else {
+    document.querySelector('.form-message').style.display = 'block';
+  }
 });
