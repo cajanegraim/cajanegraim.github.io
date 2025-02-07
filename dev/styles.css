@@ -14,6 +14,48 @@ body {
 .sidebar {
     display: none;
 }
+/* WHATSAPP BUTTON */
+#whatsapp-button {
+    position: fixed;
+    bottom: -100px;
+    right: 20px;
+    z-index: 1000;
+    transition: bottom 0.5s ease;
+    text-decoration: none;
+}
+#whatsapp-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#whatsapp-icon{
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    animation: pulse 1.5s infinite;
+}
+#whatsapp-button:hover #whatsapp-icon {
+    transform: scale(1.2);
+}
+#whatsapp-text {
+    font-size: 10px;
+    color: #2b7b8c;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 /* HEADER */
 header {
     background-color: #F2F2F2;
@@ -98,7 +140,7 @@ header.shrunk {
 #servicios {
     display: flex;
     flex-direction: column;
-    padding-inline: 5vw;
+    padding-inline: 5.5vw;
     padding-block: 10vh;
     text-align: center;
     background-image: url(/dev/img/background-2.png);
@@ -107,16 +149,16 @@ header.shrunk {
     background-repeat: no-repeat;
 }
 #servicios h1 {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 2em;
 }
 #servicios-container {
-    padding-block: 5vh;
-    gap: 3.75vw;
+    padding-block-start: 8vh;
+    gap: 1vw;
 }
 #servicios-container div {
-    width: 15vw;
-    height: 60vh;
+    width: 17vw;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,11 +172,10 @@ header.shrunk {
     margin-bottom: 3vh;
 }
 #servicios-container div div:first-child img {
-    width: 100%;
+    width: 45%;
 }
 #servicios-container div div:nth-child(2) {
-    width: 80%;
-    padding-inline: 1vw;
+    width: 100%;
 }
 #servicios-container div div:nth-child(2) h1 {
     font-size: 1.5em;
@@ -233,8 +274,8 @@ footer div:first-child div:nth-child(2) p{
     color: white;
 }
 footer div:first-child div:nth-child(2) p img{
-    height: 2.5vw;
-    margin-right: 1vw;
+    height: 1.8vw;
+    margin-right: .7vw;
 }
 footer div:first-child div:nth-child(2) p a{
     color: white;

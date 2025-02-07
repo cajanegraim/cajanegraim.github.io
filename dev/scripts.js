@@ -17,6 +17,7 @@ menuIcon.addEventListener("click", () => {
 });
 
 /* ANIMACIONES */
+//HEADER
 window.addEventListener('scroll', function() {
   if (window.scrollY > 50) {
     header.classList.add('shrunk');
@@ -24,6 +25,7 @@ window.addEventListener('scroll', function() {
     header.classList.remove('shrunk');
   }
 });
+//FADE-IN INICIAL
 window.addEventListener('DOMContentLoaded', () => {
   const contents = document.querySelectorAll('.initial-fade-in');
   
@@ -36,6 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+//FADE-IN
 window.addEventListener('scroll', () => {
   const contents = document.querySelectorAll('.fade-in');
   
@@ -48,7 +51,40 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+//WHATSAPP BUTTON
+window.onscroll = function() {
+  mostrarBoton();
+  cambiarIconoSobreFooter();
+};
+function mostrarBoton() {
+    var boton = document.getElementById("whatsapp-button");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        boton.style.bottom = "20px";  // El botón estará visible
+    } else {
+        boton.style.bottom = "-100px";  // El botón se oculta cuando está al principio
+    }
+}
+function cambiarIconoSobreFooter() {
+  var boton = document.getElementById("whatsapp-button");
+  var footer = document.querySelector("footer");
+  var icono = document.getElementById("whatsapp-icon");
+  var text = document.getElementById("whatsapp-text");
 
+  // Obtenemos la posición del footer y la posición del botón de WhatsApp
+  var botonRect = boton.getBoundingClientRect();
+  var footerRect = footer.getBoundingClientRect();
+
+  // Si el botón está sobre el footer (es decir, la parte inferior del botón está dentro del footer)
+  if (botonRect.bottom > footerRect.top && botonRect.top < footerRect.bottom) {
+      // Cambiar el ícono (puedes cambiar la imagen o el color, aquí cambiamos la imagen)
+      icono.src = "/dev/img/whatsapp-inv.svg";
+      text.style.color = "#f2f2f2";
+  } else {
+      // Volver al ícono original
+      icono.src = "/dev/img/whatsapp.svg";
+      text.style.color = "#2b7b8c";
+  }
+}
 /* CONTACTO */
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
