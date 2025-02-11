@@ -289,6 +289,52 @@ header.shrunk {
     opacity: 1;
     height: auto;
 }
+#por-que-escogernos {
+    height: 50vh;
+}
+#por-que-escogernos-left-side {
+    display: flex;
+    width: 22vw;
+    justify-content: flex-end;
+    align-items: center;
+    color: #0A636D;
+    font-size: 1.7em;
+    font-weight: 600;
+    line-height: 1;
+}
+#por-que-escogernos-right-side {
+    width: 78vw;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 10vw;
+}
+.por-que-escogernos-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-inline: 25px;
+    padding-bottom: 30px;
+    color: #FFFFFF;
+    width: 20vw;
+    height: 30vh;
+    font-size: 1.3em;
+    font-weight: 500;
+    border-radius: 20px;
+    line-height: 1;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#por-que-escogernos-card-1 {
+    background-image: url(/dev/img/pqe-card-1.png);
+}
+#por-que-escogernos-card-2 {
+    background-image: url(/dev/img/pqe-card-2.png);
+}
+#por-que-escogernos-card-3 {
+    background-image: url(/dev/img/pqe-card-3.png);
+}
 /* MAIN:CONTACTO */
 #formulario-contacto {
     display: flex;
