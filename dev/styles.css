@@ -240,22 +240,54 @@ header.shrunk {
     margin-left: 5vw;
     margin-block: 10vh;
 }
-/*
-#metodologia-overlay div {
-    width: 35vw;
-    padding: 50px;
-    border: 1px solid #ffffff;
-    border-radius: 25px;
-}
-#metodologia-overlay p {
-    text-align: justify;
-    color: white;
-    font-size: 1.2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-*/
 #metodos {
     width: 100vw;
+    height: auto;
+    background-image: url(/dev/img/metodos-background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    padding-block: 10vh;
+}
+#metodos-left-side {
+    display: flex;
+    justify-content:end;
+    width: 40vw;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+#metodos-right-side {
+    width: 60vw;
+    padding-inline: 5vw;
+}
+.text-line {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2vh;
+}
+.plus-sign {
+    color:#F27506;
+}
+.line-text {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.description {
+    color: #CBCBCB;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+.text-line.active .description {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
 }
 /* MAIN:CONTACTO */
 #formulario-contacto {

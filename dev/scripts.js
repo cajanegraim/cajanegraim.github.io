@@ -1,3 +1,5 @@
+/* FUNCIONALIDADES */
+//SIDE-BAR
 const menuIcon = document.getElementById("menu-icon");
 const sidebar = document.getElementById("sidebar");
 const content = document.querySelector("main");
@@ -14,6 +16,18 @@ menuIcon.addEventListener("click", () => {
     sidebarLinks.innerHTML = "<li><a href='/dev/index.html'>INICIO</a></li><li><a href='/dev/nosotros.html'>NOSOTROS</a></li><li><a href='/dev/servicios.html'>SERVICIOS</a></li><li><a href='/dev/areas.html'>ÁREAS DE INVESTIGACIÓN</a></li><li><a href='/dev/contacto.html'>CONTACTO</a></li>";
     console.log(sidebarLinks.innerHTML);
   }
+});
+//TEXTO DESPLEGABLE (SECCIÓN MÉTODOS)
+document.querySelectorAll('.line-text').forEach(item => {
+  item.addEventListener('click', function () {
+    const textLine = this.closest('.text-line');
+    document.querySelectorAll('.text-line').forEach(line => {
+      if (line !== textLine) {
+        line.classList.remove('active');
+      }
+    });
+    textLine.classList.toggle('active');
+  });
 });
 
 /* ANIMACIONES */
