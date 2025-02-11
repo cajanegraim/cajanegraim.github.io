@@ -191,7 +191,7 @@ header.shrunk {
 }
 #servicios-container div div:first-child {
     display: flex;
-    width: 15vw;
+    width: auto;
     height: 50%;
     align-items: center;
     justify-content: center;
