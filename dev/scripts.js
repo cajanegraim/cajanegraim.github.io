@@ -26,7 +26,7 @@ document.querySelectorAll('.line-text').forEach(item => {
         line.classList.remove('active');
       }
     });
-    textLine.classList.toggle('active');
+    textLine.classList.add('active');
   });
 });
 
