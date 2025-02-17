@@ -772,6 +772,30 @@ footer #footer-bottom a:hover {
         width: 100%;
         padding: 20px;
     }
+    #por-que-escogernos {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+    }
+    #por-que-escogernos-left-side {
+        width: 100vw;
+        justify-content: left;
+        padding-left: 10vw;
+        padding-top: 10vh;
+        font-size: 3em;
+    }
+    #por-que-escogernos-right-side {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        padding: 0;
+        justify-content: space-around;
+        gap: 5vh;
+    }
+    .por-que-escogernos-card {
+        width: 70vw;
+        height: 40vh;
+    }
     /* FOOTER */
     footer {
         position: relative;
