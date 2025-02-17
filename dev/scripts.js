@@ -100,3 +100,9 @@ function cambiarIconoSobreFooter() {
   }
 }
 /* CONTACTO */
+document.querySelector('.contacto-link').addEventListener('click', function() {
+  var destino = document.querySelector('footer');
+  destino.scrollIntoView({
+      behavior: 'smooth'
+  });
+});

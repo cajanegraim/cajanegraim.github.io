@@ -103,6 +103,16 @@ header.shrunk {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     opacity: 1;
 }
+.contacto-link {
+    font-size: 1.4em;
+    color: #2B7B8C;
+    text-decoration: none;
+    transition: 0.35s;
+}
+.contacto-link:hover {
+    cursor: pointer;
+    color: #F27506;
+}
 /* MAIN */
 .relleno-div {
     height: 200vh;
