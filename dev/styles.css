@@ -335,7 +335,80 @@ header.shrunk {
 #por-que-escogernos-card-3 {
     background-image: url(/dev/img/pqe-card-3.png);
 }
-/* MAIN:CONTACTO */
+#cita {
+    position: relative;
+    display: inline-block;
+    padding-inline: 15vw;
+    width: 100vw;
+    margin-bottom: 10vh;
+    overflow: hidden;
+}
+#cita-background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;  /* La imagen siempre estará detrás del texto */
+}
+#cita-background img {
+    width: auto;
+    max-height: 100%;
+}
+#cita-overlay {
+    position: relative;
+    z-index: 1; /* Asegura que el texto se muestre encima */
+    padding: 50px;
+    color: black;
+    background-color: #FFFFFF;
+    text-align: justify;
+    font-size: 1.2em;
+    width: 60%;
+    border-radius: 25px;
+    margin-block: 15vh;
+    margin-left: 25vw;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+/* CONTACTO */
+form {
+    display: block;
+}
+#form-container label {
+    display: none;
+}
+#form-container input,
+#form-container textarea {
+    width: 100%;
+    font-family: "Poppins", sans-serif !important;
+    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: #EBECF0;
+    border-style:solid;
+    border:none;
+    border-width:1px;
+    color: #000000;
+    resize: none;
+}
+#form-container input:focus,
+#form-container textarea:focus {
+    outline: none;
+}
+form button[type="submit"] {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 600;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    color: #FFFFFF;
+    background-color: #F27506;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*
 #formulario-contacto {
     display: flex;
     padding-block: 40vh;
@@ -390,61 +463,82 @@ header.shrunk {
     color: red;
     display: none;
 }
+*/
 /* FOOTER */
 footer {
+    height: 90vh;
+    padding-inline: 10vw;
+    padding-top: 5vh;
+    background-image: url('/dev/img/background-3.png');
+    background-size: cover;
+    background-position: center;
+}
+footer #footer-top p:nth-child(1) {
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 2.5em;
+}
+footer #footer-top p:nth-child(2) {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 3em;
+    line-height: 1;
+}
+footer #footer-top {
+    margin-bottom: 3vh;
+}
+footer #footer-center {
     display: flex;
-    align-items: center;
-    background-color: #0A636D;
-    height: 35vh;
-    padding-inline: 5vw;
-    padding-block: 5vh;
+    justify-content: space-between;
+    height: 50vh;
+}
+footer #footer-center-left, footer #footer-center-right {
+    width: 45%;
+    height: 100%;
+}
+footer #footer-center-right {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-footer div:first-child div:first-child {
-    width: 30vw;
+footer #footer-center-right-top, footer #footer-center-right-bottom {
+    height: 40%;
 }
-footer div:first-child div:nth-child(2) {
+footer #footer-center-right-top div{
+    height: 100%;
     display: flex;
-    width: 50vw;
-    justify-content: right;
+    flex-direction: column;
+    justify-content: space-between;
 }
-footer div:first-child div:first-child img {
-    width: 90%;
-}
-footer div:first-child div:nth-child(2) {
-    width: 50vw;
-    gap: 5vh;
-}
-footer div:first-child div:nth-child(2) p{
+footer #footer-center-right-top div p, footer #footer-center-right-top div a {
     display: flex;
     align-items: center;
-    padding: 0;
-    margin-bottom: 1vh;
-    color: white;
-}
-footer div:first-child div:nth-child(2) p img{
-    height: 1.8vw;
-    margin-right: .7vw;
-}
-footer div:first-child div:nth-child(2) p a{
-    color: white;
     text-decoration: none;
+    color: #FFFFFF;
 }
-footer div:first-child div:nth-child(2) p a:hover{
-    color: white;
-    text-decoration: underline;
+footer #footer-center-right-bottom img {
+    height: 100%;
+    max-width: 100%;
 }
-footer div:nth-child(2) span{
-    color: white;
-    font-size: .8em;
+.contact-icon {
+    height: 30px;
+    margin-right: .7em;
 }
-footer div:nth-child(2) span a {
-    color: white;
+footer #footer-bottom {
+    padding-top: 5vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    font-size: .9em;
+}
+footer #footer-bottom a {
+    color: #FFFFFF;
     text-decoration: none;
+    cursor: pointer;
 }
-footer div:nth-child(2) span a:hover {
-    color: white;
+footer #footer-bottom a:hover {
     text-decoration: underline;
 }
 /* ANIMACIONES */
@@ -459,6 +553,7 @@ footer div:nth-child(2) span a:hover {
 }
 .fade-in {
     opacity: 0; /* El contenido está invisible al principio */
+    transition: opacity 1.9s ease-out;
 }
 .fade-in.a {
     transition: opacity 1s ease-out, transform 1s ease-out; /* Suaviza la transición de la opacidad y el desplazamiento */

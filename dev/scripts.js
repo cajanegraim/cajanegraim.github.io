@@ -100,16 +100,3 @@ function cambiarIconoSobreFooter() {
   }
 }
 /* CONTACTO */
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  var name = document.getElementById('nombre').value;
-  var number = document.getElementById('telefono').value;
-  var email = document.getElementById('email').value;
-  var message = document.getElementById('comentario').value;
-
-  if (name && number && email && message) {
-    alert('Formulario enviado con éxito.');
-  } else {
-    document.querySelector('.form-message').style.display = 'block';
-  }
-});
