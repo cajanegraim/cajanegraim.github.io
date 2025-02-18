@@ -378,7 +378,10 @@ header.shrunk {
     margin-left: 25vw;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-/* CONTACTO */
+#cita-overlay img {
+    width: 7%;
+}
+/* FORMULARIO DE CONTACTO */
 form {
     display: block;
 }
@@ -418,62 +421,6 @@ form button[type="submit"] {
     text-decoration: none;
     cursor: pointer;
 }
-/*
-#formulario-contacto {
-    display: flex;
-    padding-block: 40vh;
-    justify-content: center;
-}
-.contact-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-}
-.contact-form h2 {
-    text-align: center;
-    color: #333;
-}
-.contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
-}
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-.contact-form textarea {
-    resize: vertical;
-    height: 150px;
-}
-.contact-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.contact-form button:hover {
-    background-color: #45a049;
-}
-.form-message {
-    font-size: 14px;
-    color: red;
-    display: none;
-}
-*/
 /* FOOTER */
 footer {
     height: 90vh;
@@ -482,6 +429,9 @@ footer {
     background-image: url('/dev/img/background-3.png');
     background-size: cover;
     background-position: center;
+}
+footer #footer-top {
+    margin-bottom: 3vh;
 }
 footer #footer-top p:nth-child(1) {
     color: #FFFFFF;
@@ -494,9 +444,6 @@ footer #footer-top p:nth-child(2) {
     font-weight: 500;
     font-size: 3em;
     line-height: 1;
-}
-footer #footer-top {
-    margin-bottom: 3vh;
 }
 footer #footer-center {
     display: flex;
@@ -791,51 +738,84 @@ footer #footer-bottom a:hover {
         padding: 0;
         justify-content: space-around;
         gap: 5vh;
+        padding-block: 5vh;
     }
     .por-que-escogernos-card {
-        width: 70vw;
-        height: 40vh;
+        background-color: #2B7B8C;
+        background-size: cover;
+        width: 80vw;
+        height: 30vh;
+        font-size: 1.7em;
+    }
+    #cita {
+        padding-inline: 10vw;
+        padding-block: 5vh;
+        height: auto;
+        margin-bottom: 5vh;
+    }
+    #cita-background img{
+        display: none;
+    }
+    #cita-overlay {
+        margin: 0;
+        width: 100%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    #cita-overlay img {
+        width: 15%;
     }
     /* FOOTER */
     footer {
-        position: relative;
-        width: 100%;
-        height: auto;
-        transition: margin-left 0.3s, left 0.3s;
+        height: 92vh;
+        padding-top: 3vh;
+        background-size: auto 100%;
+        background-color: #2b7b8c;
+        justify-content: space-around;
     }
-    footer.active {
-        margin-left: 250px;
+    footer #footer-top {
+        margin-bottom: 0;
     }
-    footer div:first-child {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-    footer div:first-child div:first-child {
-        width: 50vw;
+    footer #footer-top p:nth-child(1) {
+        color: #FFFFFF;
+        font-style: italic;
+        font-weight: 200;
+        font-size: 2em;
         margin-bottom: 3vh;
     }
-    footer div:first-child div:nth-child(2) {
+    footer #footer-top p:nth-child(2) {
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 2.5em;
+    }
+    #footer-center {
         display: flex;
         flex-direction: column;
-        width: 50vw;
-        gap: 0
+        height: 55vh;
+        width: 100%;
     }
-    footer div:first-child div:nth-child(2) p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        margin-bottom: 1vh;
-        color: white;
+    footer #footer-center-left, footer #footer-center-right {
+        width: 100%;
+        height: auto;
     }
-    footer div:nth-child(2) {
+    footer #footer-center-right-bottom {
         text-align: center;
-        padding-bottom: 1vh;
     }
-    footer div:nth-child(2) span {
-        color: white;
-        font-size: .7em;
+    footer #footer-center-right-bottom img {
+        height: 100%;
+        width: auto;
+    }
+    footer #footer-bottom {
+        bottom: 0;
+        text-align: center;
+    }
+    /* FORMULARIO DE CONTACTO */
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 3vh;
+    }
+    form button[type="submit"] {
+        margin: 0;
     }
 }
