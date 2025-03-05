@@ -65,7 +65,7 @@ header {
     align-items: center;
     padding-inline-start: 5vw;
     z-index: 1020;
-    width: 100vw;
+    width: 100%;
     transition: height 0.3s ease, padding-inline-start 0.3s ease, opacity 0.3s ease;
     opacity: .85;
 }
@@ -108,6 +108,7 @@ header.shrunk {
     color: #2B7B8C;
     text-decoration: none;
     transition: 0.35s;
+    cursor:pointer;
 }
 .contacto-link:hover {
     cursor: pointer;
@@ -127,7 +128,7 @@ header.shrunk {
 }
 #presentacion {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 #presentacion-background {
@@ -224,7 +225,7 @@ header.shrunk {
 #metodologia {
     position: relative;
     display: inline-block;
-    width: 100vw;  /* O el ancho que desees */
+    width: 100%;  /* O el ancho que desees */
 }
 #metodologia-background {
     background-image: url('/dev/img/background-2.png'); /* Ruta de la imagen */
@@ -251,7 +252,7 @@ header.shrunk {
     margin-block: 10vh;
 }
 #metodos {
-    width: 100vw;
+    width: 100%;
     height: auto;
     background-image: url(/dev/img/metodos-background.png);
     background-size: cover;
@@ -349,7 +350,7 @@ header.shrunk {
     position: relative;
     display: inline-block;
     padding-inline: 15vw;
-    width: 100vw;
+    width: 100%;
     margin-bottom: 10vh;
     overflow: hidden;
 }
@@ -404,7 +405,7 @@ form {
     resize: none;
 }
 #form-container textarea {
-    height: 150px;
+    height: 100%;
 }
 #form-container input:focus,
 #form-container textarea:focus {
@@ -426,7 +427,7 @@ form button[type="submit"] {
 }
 /* FOOTER */
 footer {
-    width: 100vw;
+    width: 100%;
     height: 90vh;
     padding-inline: 10vw;
     padding-block: 5vh;
@@ -563,7 +564,7 @@ footer {
         justify-content: space-around;
         position: fixed;
         z-index: 1000;
-        width: 100vw;
+        width: 100%;
         transition: 0.3s ease;
     }
     #header-logo-container {
@@ -654,6 +655,7 @@ footer {
     }
     .contacto-link {
         padding-right: 5vw;
+        cursor: pointer;
     }
     /* MAIN */
     main {
@@ -665,7 +667,7 @@ footer {
     }
     #presentacion {
         position: relative;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
     }
     #presentacion-background {
@@ -759,19 +761,19 @@ footer {
     }
     #por-que-escogernos {
         flex-direction: column;
-        width: 100vw;
+        width: 100%;
         height: auto;
     }
     #por-que-escogernos-left-side {
-        width: 100vw;
+        width: 100%;
         justify-content: left;
         padding-left: 10vw;
         padding-top: 10vh;
-        font-size: 3em;
+        font-size: 2em;
     }
     #por-que-escogernos-right-side {
         flex-direction: column;
-        width: 100vw;
+        width: 100%;
         height: auto;
         padding: 0;
         justify-content: space-around;
@@ -804,44 +806,39 @@ footer {
     }
     /* FOOTER */
     footer {
-        padding-top: 3vh;
         height: 92vh;
-        background-size: auto 100%;
-        padding-inline: 10vw;
-        justify-content: space-around;
+        transition: 0.3s ease;
     }
-    footer #footer-top {
-        margin: 0;
-    }
-    footer #footer-top p:nth-child(1) {
-        color: #FFFFFF;
-        font-style: italic;
-        font-weight: 200;
+    #footer-top p:nth-child(1) {
         font-size: 1.5em;
     }
     footer #footer-top p:nth-child(2) {
-        color: #FFFFFF;
-        font-weight: 500;
         font-size: 2em;
     }
     #footer-center {
-        height: auto !important;
+        height: 62vh;
         flex-direction: column;
-
+        justify-content: start;
     }
-    footer #footer-center-left, footer #footer-center-right {
+    #footer-center-left, footer #footer-center-right {
         width: 100%;
         height: auto;
     }
-    footer #footer-center-right {
+    #footer-center-left {
+        margin-bottom: 3vh;
+    }
+    #footer-center-right {
         gap: 5vh;
+    }
+    #footer-center-right-top {
+        padding-top: 0;
     }
     footer #footer-center-right-top, footer #footer-center-right-bottom {
         width: 100%;
         height: auto;
     }
     footer #footer-center-right-bottom {
-        text-align: center;
+        display: none;
     }
     footer #footer-center-right-bottom img {
         height: auto;
@@ -850,19 +847,21 @@ footer {
     footer #footer-bottom {
         text-align: center;
     }
+    footer.active {
+        margin-left: 250px;
+    }
     /* FORMULARIO DE CONTACTO */
     form {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-bottom: 3vh;
     }
     #form-container {
         height: auto;
     }
     #form-container input,
     #form-container textarea {
-        width: 100%;
+        width: 80vw;
         font-family: "Poppins", sans-serif !important;
         font-size: .85em;
         padding: 7px;

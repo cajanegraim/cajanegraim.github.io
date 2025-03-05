@@ -1,4 +1,5 @@
 /* FUNCIONALIDADES */
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 //SIDE-BAR
 const menuIcon = document.getElementById("menu-icon");
 const sidebar = document.getElementById("sidebar");
@@ -101,10 +102,19 @@ function cambiarIconoSobreFooter() {
 /* CONTACTO */
 document.querySelectorAll('.contacto-link').forEach(function(elemento) {
   // Añade el event listener a cada uno de ellos
-  elemento.addEventListener('click', function() {
+  elemento.addEventListener('click', async function() {
     var destino = document.querySelector('footer');
+    const contents = document.querySelectorAll('.fade-in');
     destino.scrollIntoView({
       behavior: 'smooth'
     });
+    contents.forEach(content => {
+      content.classList.add('visible');
+    });
+    await sleep(200);
+    sidebar.classList.toggle("active");
+    content.classList.toggle("active");
+    header.classList.toggle("active");
+    footer.classList.toggle("active");
   });
 });
