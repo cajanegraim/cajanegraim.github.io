@@ -118,3 +118,21 @@ document.querySelectorAll('.contacto-link').forEach(function(elemento) {
     footer.classList.toggle("active");
   });
 });
+/* NOSOTROS: ENFOQUE Y COMPROMISO */
+const enfoqueRadio = document.getElementById('enfoque');
+const compromisoRadio = document.getElementById('compromiso');
+const enfoqueSection = document.getElementById('nosotros-enfoque');
+const compromisoSection = document.getElementById('nosotros-compromiso');
+
+function actualizarSecciones() {
+  if (enfoqueRadio.checked) {
+    enfoqueSection.style.display = 'flex';
+    compromisoSection.style.display = 'none';
+  } else if (compromisoRadio.checked) {
+    enfoqueSection.style.display = 'none';
+    compromisoSection.style.display = 'flex';
+  }
+}
+enfoqueRadio.addEventListener('change', actualizarSecciones);
+compromisoRadio.addEventListener('change', actualizarSecciones);
+window.addEventListener('load', actualizarSecciones);
