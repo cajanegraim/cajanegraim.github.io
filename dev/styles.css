@@ -484,7 +484,7 @@ header.shrunk {
     display: flex;
     flex-direction: column;
     gap: 5vh;
-    padding-top: 5vh;
+    padding-block: 5vh;
     padding-inline: 5vw;
 }
 #nosotros-enfoque div {
@@ -507,7 +507,7 @@ header.shrunk {
 #nosotros-compromiso {
     display: flex;
     justify-content: space-between;
-    padding-top: 5vh;
+    padding-block: 5vh;
     padding-inline: 5vw;
     gap: 5vw;
     align-items: center;
