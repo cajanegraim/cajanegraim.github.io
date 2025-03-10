@@ -578,7 +578,14 @@ header.shrunk {
     padding-block: 3vh;
 }
 .tarjeta-izq {
+    display: flex;
     width: 30%;
+    align-items: baseline;
+    justify-content: center;
+}
+.tarjeta-izq img {
+    width: 80%;
+    height: auto;
 }
 .tarjeta-der {
     width: 70%;
@@ -586,20 +593,21 @@ header.shrunk {
 .tarjeta-der p:nth-of-type(1){
     color: #FFFFFF;
     font-style: normal !important;
-    font-size: 2em !important;
+    font-size: 1.8em !important;
     font-weight: 600 !important;
-    line-height: 1;
+    line-height: 1 !important;
 }
 .tarjeta-der p:nth-of-type(2){
     color: #FFFFFF !important;
     font-style: italic !important;
-    font-size: 1.9em !important;
-    font-weight: 400 !important;
+    font-size: 1.7em !important;
+    font-weight: 500 !important;
 }
 .tarjeta-der p:nth-of-type(3){
-    font-size: 1.5em !important;
+    font-size: 1.2em !important;
     font-weight: 200 !important;
-    line-height: 1;
+    line-height: 1 !important;
+    width: 100% !important;
 }
 #nosotros-nuestro-equipo-area-cualitativa {
     padding-inline: 3vw;
@@ -610,6 +618,66 @@ header.shrunk {
     font-style: italic;
     font-size: 2.5em;
     font-weight: 500;    
+}
+#nosotros-nuestros-servicios {
+    background-image: url(/dev/img/servicios-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-inline: 10vw;
+    padding-block: 15vh;
+}
+#nosotros-nuestros-servicios p:nth-of-type(1) {
+    color: #2E6695;
+    font-size: 4.5em;
+    font-weight: 200;
+    line-height: 1;
+    padding-left: 8vw;
+}
+#nosotros-nuestros-servicios p:nth-of-type(2) {
+    color: #1D384F;
+    font-size: 5.5em;
+    font-weight: 600;
+    line-height: 1;
+    padding-left: 8vw;
+}
+.tarjeta-servicio {
+    display: flex;
+    width: 100%;
+    height: 20vw;
+    margin-top: 10vh;
+}
+.tarjeta-servicio:nth-child(odd) {
+    flex-direction: row;
+}
+.tarjeta-servicio:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.tarjeta-servicio-titulo {
+    width: 25%;
+    height: 100%;
+    background-color: rgba(29, 56, 79, .9);
+}
+.tarjeta-servicio-descripcion {
+    width: 75%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, .9);
+    display: flex;
+    align-items: center;
+    padding-inline: 5vw;
+}
+.tarjeta-servicio-descripcion p{
+    line-height: normal !important;
+    padding: 0 !important;
+    color: #000000 !important;
+    font-size: 1.5em !important;
+    font-weight: 300 !important;
+}
+.tarjeta-servicio:nth-child(odd) .tarjeta-servicio-descripcion p{
+    text-align: start;
+}
+.tarjeta-servicio:nth-child(even) .tarjeta-servicio-descripcion p{
+    text-align: end;
 }
 /* FORMULARIO DE CONTACTO */
 form {
