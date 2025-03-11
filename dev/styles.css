@@ -1271,6 +1271,58 @@ footer {
     #nosotros-nuestro-equipo-area-cualitativa p:nth-of-type(1) {
         font-size: 2.2em !important;
     }
+    /* MAIN SERVICIOS */
+    #servicios-nuestros-servicios {
+        background-image: url(/dev/img/servicios-background-movil.png);
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10vh;
+    }
+    #servicios-nuestros-servicios p:nth-of-type(1) {
+        font-size: 2.5em;
+        font-weight: 300;
+        padding-left: 0;
+    }
+    #servicios-nuestros-servicios p:nth-of-type(2) {
+        font-size: 3.5em;
+        font-weight: 600;
+        padding-left: 0;
+        padding-bottom: 5vh;
+    }
+    .tarjeta-servicio:nth-child(odd), .tarjeta-servicio:nth-child(even) {
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 5vh;
+        height: auto;
+        align-items: center;
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .tarjeta-servicio-titulo {
+        width: 100%;
+        height: auto;
+        padding: 25px;
+    }
+    .tarjeta-servicio-titulo-container img {
+        width: 50%;
+    }
+    .tarjeta-servicio-titulo-p1 {
+        font-size: 1.2em !important;
+    }
+    .tarjeta-servicio-titulo-p2 {
+        font-size: 1em !important;
+
+    }
+    .tarjeta-servicio-descripcion {
+        width: 100%;
+        padding: 25px;
+        height: auto;
+    }
+    .tarjeta-servicio-descripcion p {
+        font-size: 1.2em !important;
+    }
+    .tarjeta-servicio:nth-child(even) .tarjeta-servicio-descripcion p {
+        text-align: start;
+    }
     /* FOOTER */
     footer {
         height: 92vh;
