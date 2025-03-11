@@ -24,7 +24,7 @@ function verificarAnchoPantalla() {
       }
     });
   }else{
-    header.innerHTML = "<div id='header-logo-container'><a href='/dev/index.html'><img src='/dev/img/logo.png' alt=''></a></div><nav><ul class='nav-links'><li><a href='/dev/nosotros.html'>NOSOTROS</a></li><li><a href='/dev/servicios.html'>SERVICIOS</a></li><li class='contacto-link'>CONTACTO</li></ul></nav>";
+    header.innerHTML = "<div id='header-logo-container'><a href='/dev/index.html'><img src='/dev/img/logo.png' alt=''></a></div><nav><ul class='nav-links'><li><a href='/dev/index.html'>INICIO</a></li><li><a href='/dev/nosotros.html'>NOSOTROS</a></li><li><a href='/dev/servicios.html'>SERVICIOS</a></li><li class='contacto-link'>CONTACTO</li></ul></nav>";
   }
 }
 window.addEventListener('resize', verificarAnchoPantalla);
