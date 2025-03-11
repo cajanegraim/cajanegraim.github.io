@@ -1,22 +1,34 @@
-/* FUNCIONALIDADES */
-const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
-//SIDE-BAR
-const menuIcon = document.getElementById("menu-icon");
 const sidebar = document.getElementById("sidebar");
 const content = document.querySelector("main");
 const header = document.querySelector("header");
 const footer = document.querySelector("footer");
+/* FUNCIONALIDADES */
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+//HEADER
+function verificarAnchoPantalla() {
+  const header = document.querySelector('header');
+  const anchoPantalla = window.innerWidth;
 
-menuIcon.addEventListener("click", () => {
-  sidebar.classList.toggle("active");
-  content.classList.toggle("active");
-  header.classList.toggle("active");
-  footer.classList.toggle("active");
-  if (window.location.pathname != '/dev/index.html' && window.location.pathname != '/dev/') {
-    sidebarLinks = document.querySelector(".sidebar-links");
-    sidebarLinks.innerHTML = "<li><a href='/dev/index.html'>INICIO</a></li><li><a href='/dev/nosotros.html'>NOSOTROS</a></li><li><a href='/dev/servicios.html'>SERVICIOS</a></li><li><a href='/dev/areas.html'>ÁREAS DE INVESTIGACIÓN</a></li><li class='contacto-link'>CONTACTO</li>";
+  if (anchoPantalla <= 768) {
+    header.innerHTML = "<div class='menu-icon' id='menu-icon'><span></span><span></span><span></span></div><div id='header-logo-container'><a href='/dev/index.html'><img src='/dev/img/logo.png' alt=''></a></div><nav><ul class='nav-links'><li><a href='/dev/nosotros.html'>NOSOTROS</a></li><li><a href='/dev/servicios.html'>SERVICIOS</a></li><li class='contacto-link'>CONTACTO</li></ul></nav>";
+    const menuIcon = document.getElementById("menu-icon");
+    //SIDE-BAR
+    menuIcon.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+      content.classList.toggle("active");
+      header.classList.toggle("active");
+      footer.classList.toggle("active");
+      if (window.location.pathname != '/dev/index.html' && window.location.pathname != '/dev/') {
+        sidebarLinks = document.querySelector(".sidebar-links");
+        sidebarLinks.innerHTML = "<li><a href='/dev/index.html'>INICIO</a></li><li><a href='/dev/nosotros.html'>NOSOTROS</a></li><li><a href='/dev/servicios.html'>SERVICIOS</a></li><li><a href='/dev/areas.html'>ÁREAS DE INVESTIGACIÓN</a></li><li class='contacto-link'>CONTACTO</li>";
+      }
+    });
+  }else{
+    header.innerHTML = "<div id='header-logo-container'><a href='/dev/index.html'><img src='/dev/img/logo.png' alt=''></a></div><nav><ul class='nav-links'><li><a href='/dev/nosotros.html'>NOSOTROS</a></li><li><a href='/dev/servicios.html'>SERVICIOS</a></li><li class='contacto-link'>CONTACTO</li></ul></nav>";
   }
-});
+}
+window.addEventListener('resize', verificarAnchoPantalla);
+verificarAnchoPantalla();
 //TEXTO DESPLEGABLE (SECCIÓN MÉTODOS)
 document.querySelectorAll('.line-text').forEach(item => {
   item.addEventListener('click', function () {
@@ -118,21 +130,24 @@ document.querySelectorAll('.contacto-link').forEach(function(elemento) {
     footer.classList.toggle("active");
   });
 });
-/* NOSOTROS: ENFOQUE Y COMPROMISO */
-const enfoqueRadio = document.getElementById('enfoque');
-const compromisoRadio = document.getElementById('compromiso');
-const enfoqueSection = document.getElementById('nosotros-enfoque');
-const compromisoSection = document.getElementById('nosotros-compromiso');
 
-function actualizarSecciones() {
-  if (enfoqueRadio.checked) {
-    enfoqueSection.style.display = 'flex';
-    compromisoSection.style.display = 'none';
-  } else if (compromisoRadio.checked) {
-    enfoqueSection.style.display = 'none';
-    compromisoSection.style.display = 'flex';
+/* NOSOTROS: ENFOQUE Y COMPROMISO */
+if (window.location.pathname === '/dev/nosotros.html') {
+  const enfoqueRadio = document.getElementById('enfoque');
+  const compromisoRadio = document.getElementById('compromiso');
+  const enfoqueSection = document.getElementById('nosotros-enfoque');
+  const compromisoSection = document.getElementById('nosotros-compromiso');
+
+  function actualizarSecciones() {
+    if (enfoqueRadio.checked) {
+      enfoqueSection.style.display = 'flex';
+      compromisoSection.style.display = 'none';
+    } else if (compromisoRadio.checked) {
+      enfoqueSection.style.display = 'none';
+      compromisoSection.style.display = 'flex';
+    }
   }
+  enfoqueRadio.addEventListener('change', actualizarSecciones);
+  compromisoRadio.addEventListener('change', actualizarSecciones);
+  window.addEventListener('load', actualizarSecciones);
 }
-enfoqueRadio.addEventListener('change', actualizarSecciones);
-compromisoRadio.addEventListener('change', actualizarSecciones);
-window.addEventListener('load', actualizarSecciones);
