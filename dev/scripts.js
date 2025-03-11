@@ -21,6 +21,24 @@ function verificarAnchoPantalla() {
       if (window.location.pathname != '/dev/index.html' && window.location.pathname != '/dev/') {
         sidebarLinks = document.querySelector(".sidebar-links");
         sidebarLinks.innerHTML = "<li><a href='/dev/index.html'>INICIO</a></li><li><a href='/dev/nosotros.html'>NOSOTROS</a></li><li><a href='/dev/servicios.html'>SERVICIOS</a></li><li class='contacto-link'>CONTACTO</li>";
+        document.querySelectorAll('.contacto-link').forEach(function(elemento) {
+          // Añade el event listener a cada uno de ellos
+          elemento.addEventListener('click', async function() {
+            var destino = document.querySelector('footer');
+            const contents = document.querySelectorAll('.fade-in');
+            destino.scrollIntoView({
+              behavior: 'smooth'
+            });
+            contents.forEach(content => {
+              content.classList.add('visible');
+            });
+            await sleep(200);
+            sidebar.classList.toggle("active");
+            content.classList.toggle("active");
+            header.classList.toggle("active");
+            footer.classList.toggle("active");
+          });
+        });
       }
     });
   }else{
@@ -115,7 +133,6 @@ function cambiarIconoSobreFooter() {
 document.querySelectorAll('.contacto-link').forEach(function(elemento) {
   // Añade el event listener a cada uno de ellos
   elemento.addEventListener('click', async function() {
-    console.log("AQUI");
     var destino = document.querySelector('footer');
     const contents = document.querySelectorAll('.fade-in');
     destino.scrollIntoView({
