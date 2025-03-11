@@ -661,6 +661,28 @@ header.shrunk {
     width: 25%;
     height: 100%;
     background-color: rgba(29, 56, 79, .9);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 40px;
+    display: flex;
+}
+.tarjeta-servicio-titulo-container img{
+    width: 25%;
+    height: auto;
+}
+.tarjeta-servicio-titulo-p1 {
+    color: #FFFFFF !important;
+    font-size: 2em !important;
+    font-weight: 500 !important;
+    padding: 0 !important;
+}
+.tarjeta-servicio-titulo-p2 {
+    color: #CBCBCB !important;
+    font-size: 1em !important;
+    font-weight: 200 !important;
+    padding: 0 !important;
+    line-height: normal !important;
 }
 .tarjeta-servicio-descripcion {
     width: 75%;
