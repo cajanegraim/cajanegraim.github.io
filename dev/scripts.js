@@ -20,7 +20,7 @@ function verificarAnchoPantalla() {
       footer.classList.toggle("active");
       if (window.location.pathname != '/dev/index.html' && window.location.pathname != '/dev/') {
         sidebarLinks = document.querySelector(".sidebar-links");
-        sidebarLinks.innerHTML = "<li><a href='/dev/index.html'>INICIO</a></li><li><a href='/dev/nosotros.html'>NOSOTROS</a></li><li><a href='/dev/servicios.html'>SERVICIOS</a></li><li><a href='/dev/areas.html'>ÁREAS DE INVESTIGACIÓN</a></li><li class='contacto-link'>CONTACTO</li>";
+        sidebarLinks.innerHTML = "<li><a href='/dev/index.html'>INICIO</a></li><li><a href='/dev/nosotros.html'>NOSOTROS</a></li><li><a href='/dev/servicios.html'>SERVICIOS</a></li><li class='contacto-link'>CONTACTO</li>";
       }
     });
   }else{
@@ -115,6 +115,7 @@ function cambiarIconoSobreFooter() {
 document.querySelectorAll('.contacto-link').forEach(function(elemento) {
   // Añade el event listener a cada uno de ellos
   elemento.addEventListener('click', async function() {
+    console.log("AQUI");
     var destino = document.querySelector('footer');
     const contents = document.querySelectorAll('.fade-in');
     destino.scrollIntoView({
