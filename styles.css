@@ -135,7 +135,7 @@ header.shrunk {
 #presentacion-background {
     width: 100%;
     height: 100%;
-    background-image: url('/dev/img/background-1.png');
+    background-image: url('/img/background-1.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -237,7 +237,7 @@ header.shrunk {
     width: 100%;  /* O el ancho que desees */
 }
 #metodologia-background {
-    background-image: url('/dev/img/background-2.png'); /* Ruta de la imagen */
+    background-image: url('/img/background-2.png'); /* Ruta de la imagen */
     background-size: cover;
     background-position: center;
     height: 100%;  /* Se adapta al tamaño del contenedor */
@@ -263,7 +263,7 @@ header.shrunk {
 #metodos {
     width: 100%;
     height: auto;
-    background-image: url(/dev/img/metodos-background.png);
+    background-image: url(/img/metodos-background.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -347,13 +347,13 @@ header.shrunk {
     background-repeat: no-repeat;
 }
 #por-que-escogernos-card-1 {
-    background-image: url(/dev/img/pqe-card-1.png);
+    background-image: url(/img/pqe-card-1.png);
 }
 #por-que-escogernos-card-2 {
-    background-image: url(/dev/img/pqe-card-2.png);
+    background-image: url(/img/pqe-card-2.png);
 }
 #por-que-escogernos-card-3 {
-    background-image: url(/dev/img/pqe-card-3.png);
+    background-image: url(/img/pqe-card-3.png);
 }
 #cita {
     position: relative;
@@ -400,7 +400,7 @@ header.shrunk {
 #nosotros-banner-background {
     width: 100%;
     height: 100%;
-    background-image: url('/dev/img/nosotros-banner.png');
+    background-image: url('/img/nosotros-banner.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -623,7 +623,7 @@ header.shrunk {
 }
 /* MAIN SERVICIOS */
 #servicios-nuestros-servicios {
-    background-image: url(/dev/img/servicios-background.png);
+    background-image: url(/img/servicios-background.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -754,7 +754,7 @@ footer {
     height: 90vh;
     padding-inline: 10vw;
     padding-block: 5vh;
-    background-image: url('/dev/img/background-3.png');
+    background-image: url('/img/background-3.png');
     background-size: cover;
     background-position: center;
 }
@@ -1273,7 +1273,7 @@ footer {
     }
     /* MAIN SERVICIOS */
     #servicios-nuestros-servicios {
-        background-image: url(/dev/img/servicios-background-movil.png);
+        background-image: url(/img/servicios-background-movil.png);
         display: flex;
         justify-content: center;
         padding-bottom: 10vh;
