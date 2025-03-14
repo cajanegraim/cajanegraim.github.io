@@ -604,6 +604,7 @@ header.shrunk {
     font-style: italic !important;
     font-size: 1.7em !important;
     font-weight: 500 !important;
+    line-height: 1;
 }
 .tarjeta-der p:nth-of-type(3){
     font-size: 1.2em !important;
@@ -801,7 +802,7 @@ footer {
 }
 #footer-center-right-top {
     width: 36vw;
-    height: 26vh;
+    height: 37vh;
     padding-top: 5vh;
 }
 #footer-center-right-top div{
@@ -826,7 +827,7 @@ footer {
 }
 #footer-center-right-bottom {
     width: 36vw;
-    height: 26vh;
+    height: 20vh;
 }
 #footer-bottom a {
     color: #FFFFFF;
@@ -1355,6 +1356,18 @@ footer {
     footer #footer-center-right-top, footer #footer-center-right-bottom {
         width: 100%;
         height: auto;
+    }
+    #footer-center-right-top div {
+        justify-content: space-between;
+        gap: 10px;
+    }
+    #footer-center-right-top div p {
+        font-size: .8em;
+        line-height: 1;
+    }
+    .contact-icon {
+        height: 20px;
+        margin-right: .7em;
     }
     footer #footer-center-right-bottom {
         display: none;
