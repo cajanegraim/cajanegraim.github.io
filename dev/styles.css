@@ -59,7 +59,7 @@ body {
 /* HEADER */
 header {
     position: fixed;
-    background-color: #F2F2F2;
+    background-color: rgba(242, 242, 242, .85);
     height: 15vh;
     display: flex;
     align-items: center;
@@ -68,8 +68,7 @@ header {
     padding-inline-end: 10vw;
     z-index: 1020;
     width: 100%;
-    transition: height 0.3s ease, padding-inline-start 0.3s ease, opacity 0.3s ease;
-    opacity: .85;
+    transition: height 0.3s ease, padding-inline-start 0.3s ease, background-color 0.3s ease;
 }
 #header-logo-container {
     height: 100%;
@@ -103,7 +102,7 @@ header nav ul li a:hover {
 header.shrunk {
     height: 10vh;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 1;
+    background-color: rgba(242, 242, 242, 1);
 }
 .contacto-link {
     font-size: 1.4em;
