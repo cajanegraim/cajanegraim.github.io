@@ -472,6 +472,7 @@ header.shrunk {
     color: #000000;
     border-radius: 55px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 #nosotros-enfoque-compromiso-switch-container input:checked + label {
     font-size: 2em;
